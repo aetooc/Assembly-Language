@@ -2,13 +2,14 @@
 
 ; start of code 
 
-mov  ax, 5              ; move the constant 5 into register ax 
-mov  bx, 10             
+mov  ax, 7FF0h              ; move the constant 5 into register ax 
+add  al, 10h             
 
-add  ax, bx             ; add value of bx into the value of ax 
+add  ah, 1             ; add value of bx into the value of ax 
 
-mov  bx, 15             ; add constant 15 into the value of bx 
-add  ax, bx
+add  ax, 2
+sub al, -130           ; add constant 15 into the value of bx 
+
 
 mov  ax, 0x4c00         ; exit .. 
 int  0x21               ; .. is what the OS should do for me
